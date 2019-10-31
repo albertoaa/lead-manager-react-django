@@ -14,7 +14,7 @@ export class Register extends Component {
     console.log('submit');
   };
 
-  onChange = e.this.setState({ [e.target.name]: e.target.value });
+  onChange = e => this.setState({ [e.target.name]: e.target.value });
 
   render() {
     const { username, email, password, password2 } = this.state;
@@ -69,8 +69,7 @@ export class Register extends Component {
               </button>
             </div>
             <p>
-              Already hava an account?
-              <Link to="/login">Login</Link>
+              Already hava an account? <Link to="/login">Login</Link>
             </p>
           </form>
         </div>

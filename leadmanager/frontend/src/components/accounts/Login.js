@@ -12,7 +12,7 @@ export class Login extends Component {
     console.log('submit');
   };
 
-  onChange = e.this.setState({ [e.target.name]: e.target.value });
+  onChange = e => this.setState({ [e.target.name]: e.target.value });
 
   render() {
     const { username, password } = this.state;
@@ -47,8 +47,7 @@ export class Login extends Component {
               </button>
             </div>
             <p>
-              Don't have an account?
-              <Link to="/register">Register</Link>
+              Don't have an account? <Link to="/register">Register</Link>
             </p>
           </form>
         </div>
